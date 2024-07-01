@@ -1,0 +1,17 @@
+@use '../global/variables.module.scss' as *;
+@use '../global/mixins.module.scss' as *;
+
+.header {
+  position: relative;
+  width: 100%;
+  padding: var(--spacing-m) 0;
+  &__wrapper {
+    width: 100%;
+    max-width: var(--site-width-xl);
+    margin: auto;
+    padding: 0 var(--spacing-l);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

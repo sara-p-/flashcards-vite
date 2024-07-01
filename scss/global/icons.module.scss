@@ -1,0 +1,45 @@
+@use './variables.module.scss' as *;
+@use './mixins.module.scss' as *;
+
+.icon::after {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}
+
+.arrow-right::after {
+  content: '\f061';
+  padding-left: 6px;
+}
+
+.chevron-right::after {
+  content: '\f054';
+}
+
+.chevron-left::after {
+  content: '\f053';
+}
+
+.x-mark::after {
+  content: '\f00d';
+}
+
+.moon::after {
+  content: '\f186';
+}
+
+.sun::after {
+  content: '\f185';
+}
+
+.alphabet::after {
+  content: '\f15d';
+}
+
+.random::after {
+  content: '\f074';
+}

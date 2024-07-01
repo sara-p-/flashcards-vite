@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/d2d9bdc7cf.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Vite App</title>
+  </head>
+  <body data-theme="light">
+    <header class="header">
+      <div class="header__wrapper">
+        <h1>Array Functions</h1>
+        <div class="toggles">
+          <div class="toggle-box sort">
+            <div class="icon alphabet"></div>
+            <input
+              type="checkbox"
+              class="toggle toggle-sort"
+              id="sort-toggle"
+            />
+            <label for="sort-toggle">Randomize/Alphabetize function list</label>
+            <div class="icon random"></div>
+          </div>
+          <div class="toggle-box theme">
+            <div class="icon sun"></div>
+            <input
+              type="checkbox"
+              class="toggle toggle-theme"
+              id="theme-toggle"
+            />
+            <label for="theme-toggle">Toggle Dark/Light theme</label>
+            <div class="icon moon"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="box">
+        <div class="box__wrapper">
+          <div class="items grid"></div>
+        </div>
+      </div>
+    </main>
+    <dialog class="dialog">
+      <div class="dialog__wrapper">
+        <button
+          class="dialog__button last icon chevron-left"
+          data-direction="last"
+        >
+          <span class="visually-hidden">Last</span>
+        </button>
+        <div class="item">
+          <div class="item__header">
+            <div class="item__title-box"></div>
+            <button id="dialog-close-button" class="icon x-mark" autofocus>
+              <span class="visually-hidden">Close modal</span>
+            </button>
+          </div>
+          <div class="item__content"></div>
+        </div>
+        <button
+          class="dialog__button next icon chevron-right"
+          data-direction="next"
+        >
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </dialog>
+    <script type="module" src="/js/main.js"></script>
+  </body>
+</html>

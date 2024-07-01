@@ -1,0 +1,26 @@
+@use './variables.module.scss' as *;
+@use './mixins.module.scss' as *;
+
+button {
+  cursor: pointer;
+}
+
+.button-link {
+  padding: var(--spacing-s) var(--spacing-xl);
+  border: var(--base-border-small);
+  border-color: var(--primary-color);
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  font-weight: 500;
+  text-decoration: none;
+  line-height: 1;
+  border-radius: var(--base-border-radius);
+  display: inline-block;
+  &::after {
+    padding-left: 6px;
+  }
+  &:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+  }
+}

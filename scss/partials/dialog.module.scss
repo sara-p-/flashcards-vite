@@ -1,0 +1,147 @@
+@use '../global/variables.module.scss' as *;
+@use '../global/mixins.module.scss' as *;
+
+.dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+
+  &::backdrop {
+    background-color: var(--secondary-color);
+    opacity: 85%;
+  }
+  &__wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    @include desktop-up {
+      flex-wrap: nowrap;
+    }
+  }
+
+  .item {
+    padding: 0;
+    margin: var(--spacing-l) 0;
+    border: var(--base-border);
+    border-color: var(--primary-color);
+    background-color: var(--secondary-color);
+    height: 100%;
+    max-height: 75%;
+    width: 100%;
+    overflow: scroll;
+    order: 1;
+    border-radius: var(--base-border-radius);
+    margin: var(--spacing-m);
+    @include desktop-up {
+      order: inherit;
+      max-width: 1000px;
+      max-height: 85%;
+    }
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: var(--spacing-l);
+      border-bottom: var(--base-border);
+      border-color: var(--primary-color);
+      padding: var(--spacing-s);
+      @include tablet-landscape-up {
+        padding: var(--spacing-s) var(--spacing-l);
+      }
+      h2.name {
+        @include heading-style(2rem);
+        @include desktop-up {
+          @include heading-style(var(--h2-font-size));
+        }
+      }
+    }
+    &__content {
+      width: 100%;
+      // max-width: 800px;
+      height: 100%;
+      padding: 0 var(--spacing-l);
+      position: relative;
+      // margin: auto;
+    }
+    .description {
+      width: 100%;
+      max-width: 800px;
+      margin-bottom: var(--spacing-l);
+      color: var(--primary-color);
+      font-size: 1.2rem;
+      font-weight: 600;
+      line-height: 1.35;
+      @include tablet-landscape-up {
+        font-size: 1.5rem;
+      }
+    }
+    .image {
+      width: 100%;
+      height: auto;
+      max-width: 800px;
+      display: block;
+      margin-bottom: var(--spacing-l);
+    }
+    .button-link {
+      margin-bottom: var(--spacing-l);
+    }
+  }
+
+  &__button {
+    flex: auto;
+    height: 21%;
+    border: none;
+    color: var(--primary-color);
+    // opacity: 0.7;
+    background-color: transparent;
+    @include desktop-up {
+      @include heading-style(3rem);
+      height: 100%;
+    }
+    &:hover {
+      // opacity: 1;
+      color: var(--accent-color);
+    }
+    &.next:after,
+    &.last::after {
+      font-size: 3rem;
+    }
+    &.last {
+      order: 2;
+      @include desktop-up {
+        order: inherit;
+      }
+    }
+    &.next {
+      order: 3;
+      @include desktop-up {
+        order: inherit;
+      }
+    }
+  }
+}
+
+#dialog-close-button {
+  background: transparent;
+  border: none;
+  font-size: var(--base-font-size);
+  color: var(--primary-color);
+  font-size: 3rem;
+  @include tablet-landscape-up {
+  }
+  &:hover {
+    color: var(--accent-color);
+  }
+}

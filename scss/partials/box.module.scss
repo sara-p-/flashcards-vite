@@ -1,0 +1,14 @@
+@use '../global/variables.module.scss' as *;
+@use '../global/mixins.module.scss' as *;
+
+.box {
+  position: relative;
+  width: 100%;
+  padding: 0 0 var(--spacing-xl) 0;
+  &__wrapper {
+    width: 100%;
+    max-width: var(--site-width-xl);
+    margin: auto;
+    padding: 0 var(--spacing-l);
+  }
+}
