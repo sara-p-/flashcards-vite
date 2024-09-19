@@ -7,11 +7,10 @@ button.item {
   background-color: var(--secondary-color);
   text-align: left;
   line-height: 1;
-  vertical-align: unset;
   transition: all 300ms;
   border: var(--base-border);
   border-color: var(--primary-color);
-  @include heading-style(var(--h2-font-size));
+  @include heading-style(var(--h3-font-size));
   display: block;
   cursor: pointer;
   padding: var(--spacing-s);
